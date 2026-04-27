@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card p-4 shadow">
+    <h3>Exam Form</h3>
+    <form method="POST">
+        {% csrf_token %}
+
+        <input class="form-control mb-2" name="name" placeholder="Full Name">
+        <input class="form-control mb-2" name="course" placeholder="Course">
+        <input class="form-control mb-2" name="year" placeholder="Year">
+        <input class="form-control mb-2" name="address" placeholder="Address">
+        <input class="form-control mb-2" name="phone" placeholder="Phone Number">
+
+        <button class="btn btn-primary w-100">Submit</button>
+    </form>
+</div>
+{% endblock %}
